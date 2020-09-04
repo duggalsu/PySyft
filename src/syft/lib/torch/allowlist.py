@@ -617,3 +617,10 @@ allowlist["torch.nn.Linear"] = "torch.nn.Linear"
 # allowlist.add("torch.nn.Linear.parameters")
 allowlist["torch.nn.parameter.Parameter"] = "torch.nn.parameter.Parameter"
 allowlist["torch.nn.parameter.Parameter.__add__"] = "torch.nn.parameter.Parameter"
+
+
+# MNIST
+allowlist["torch.manual_seed"] = "torch.Generator"
+allowlist["torch.Generator"] = "torch.Generator"
+allowlist["torch.Generator.get_state"] = "torch.Tensor"  # Probably dont want this?
+allowlist["torch.Generator.set_state"] = "torch.Generator"  # Probably dont want this?
